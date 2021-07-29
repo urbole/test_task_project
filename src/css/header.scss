@@ -1,0 +1,158 @@
+.app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid rgba(32, 32, 32, 0.05);
+
+  &__burger-btn {
+    display: none;
+    position: relative;
+    height: 18px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    & span {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      height: 2px;
+      background-color: #202020;
+      transition: transform .3s ease-in;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #202020;
+      transition: opacity .3s ease-in;
+    }
+
+    &::before {
+      top: 0;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: translateY(50%);
+    }
+
+    @media screen and (max-width: 960px) {
+      display: flex;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+
+    &-items {
+      margin-right: 2.5em;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #202020;
+    font-weight: bold;
+    font-size: 1.313em;
+    line-height: 1.625em;
+
+    &:not(:last-child) {
+      margin-right: 2em;
+    }
+
+    &:last-child {
+      text-transform: uppercase;
+      color: #CC0000;
+    }
+  }
+
+  &__search {
+    width: 30px;
+    background-image: url('../assets/ico/search.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    border: 1px solid #fff;
+    margin-right: 1.5em;
+
+    &:focus {
+      width: 10rem;
+      background-image: none;
+    }
+  }
+
+  &__cart-btn-open {
+    position: relative;
+    border: 1px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+
+    & span {
+      display: none;
+      position: absolute;
+      content: '8';
+      top: 0;
+      right: 0;
+      background-color: red;
+      color: #fff;
+      border-radius: 50%;
+      width: 1rem;
+      height: 1rem;
+      justify-content: center;
+      align-items: center;
+      line-height: 1;
+    }
+  }
+  & .not-empty{
+    display: flex;
+  }
+}
+
+.app-header--menu-open .app-header__burger-btn span:nth-of-type(1) {
+  transform: rotate(45deg);
+}
+
+.app-header--menu-open .app-header__burger-btn span:nth-of-type(2) {
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+.app-header--menu-open .app-header__burger-btn::before,
+.app-header--menu-open .app-header__burger-btn::after {
+  opacity: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .app-header__nav-items {
+    display: none;
+  }
+
+  .app-header__burger-btn {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .app-header {
+    padding: 0 1rem;
+  }
+
+  .app-header__logo .app-header__img {
+    width: 170px;
+  }
+
+  .app-header__search {
+    display: none;
+  }
+}
