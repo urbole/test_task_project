@@ -15,6 +15,7 @@ const cartOpenBtn = () => {
   const cart = document.body.querySelector('.cart');
   cart.classList.add('app-header--cart-open');
 };
+
 function Header() {
   
   return (
