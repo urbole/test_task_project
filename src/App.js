@@ -1,32 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from './components/header';
-import Cart from "./components/cart/Cart";
-import { CartProvider } from "./components/cart/context";
-import Products from "./components/cart/Products";
-
+import ProductCard from './components/productCard';
+import { products } from './components/products';
 import './App.scss';
-
+import Cart from './components/Cart';
 
 
 function App() {
 
 
+
+
+
   return (
     <>
-      <CartProvider>
-        <Cart />
+      <Cart />
       <div className="app__wrapper">
         <div className='main__wrapper'>
           <Header />
           <div className='product__wrapper'>
             {
-              // products.map((product, i) => <Product data={product} key={i} />)
-              <Products />
+              products.map((product, i) => 
+              <ProductCard data={product} key={i} 
+              />)
             }
           </div>
         </div>
       </div>
-      </CartProvider>
     </>
   );
 }

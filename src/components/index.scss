@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Mulish:wght@400;700&display=swap');
+@import url(./css/reset.css);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  color: #202020;
+
+  @media screen and (max-width: 1198px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 720px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 580px) {
+    font-size: 14px;
+  }
+}

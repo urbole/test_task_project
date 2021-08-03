@@ -16,7 +16,6 @@ export const products = [
     length: '60 CM (24 INCHES)',
     price: 29.95,
     discountPrice: 19.95,
-    quantity: 1,
     descTitle: 'Handmade Chain Geri and Freki Viking Necklace with Thor Hammer Mjolnir!',
     desc: 'The Kings chain was worn by Viking kings as a status symbol as the name applies. This is a 100% handmade Stainless Steel Chain. The crafting is a very time consuming process to put together the chain link by  link.  The hand made chain connects together with a lobster clamp.',
   },
@@ -33,7 +32,6 @@ export const products = [
     length: '60 CM (24 INCHES)',
     price: 39.95,
     discountPrice: 29.95,
-    quantity: 1,
     descTitle: 'Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     desc: 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
   }

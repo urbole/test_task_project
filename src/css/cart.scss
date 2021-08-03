@@ -43,8 +43,7 @@
     overflow: scroll;
     overflow-x: hidden;
     // overflow-y: none;
-  }
-
+  } 
   &__item {
     padding: 1rem;
     display: flex;
@@ -75,7 +74,6 @@
     &-purchase {
       color: #CC0000;
       margin-bottom: .65rem;
-
       & span:last-child {
         color: #B4B4B4;
         margin-left: .5rem;
